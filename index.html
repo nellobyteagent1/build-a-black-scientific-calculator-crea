@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div class="expression" id="expression"></div>
+      <div class="result" id="result">0</div>
+    </div>
+    <div class="history-toggle">
+      <button id="historyBtn" title="History">&#9776;</button>
+    </div>
+    <div class="history-panel" id="historyPanel">
+      <div class="history-header">
+        <span>History</span>
+        <button id="clearHistory">Clear</button>
+      </div>
+      <div class="history-list" id="historyList"></div>
+    </div>
+    <div class="buttons">
+      <!-- Row 1: Scientific -->
+      <button class="btn fn" data-action="sin">sin</button>
+      <button class="btn fn" data-action="cos">cos</button>
+      <button class="btn fn" data-action="tan">tan</button>
+      <button class="btn fn" data-action="log">log</button>
+      <button class="btn fn" data-action="ln">ln</button>
+
+      <!-- Row 2: Scientific -->
+      <button class="btn fn" data-action="sqrt">&radic;</button>
+      <button class="btn fn" data-action="pow">x<sup>y</sup></button>
+      <button class="btn fn" data-action="square">x&sup2;</button>
+      <button class="btn fn" data-action="pi">&pi;</button>
+      <button class="btn fn" data-action="e">e</button>
+
+      <!-- Row 3: Parens, clear, etc -->
+      <button class="btn paren" data-action="(">(</button>
+      <button class="btn paren" data-action=")">)</button>
+      <button class="btn op" data-action="%">%</button>
+      <button class="btn clear" data-action="AC">AC</button>
+      <button class="btn clear" data-action="DEL">&#9003;</button>
+
+      <!-- Row 4: 7 8 9 / -->
+      <button class="btn num" data-action="7">7</button>
+      <button class="btn num" data-action="8">8</button>
+      <button class="btn num" data-action="9">9</button>
+      <button class="btn op" data-action="/">&divide;</button>
+      <button class="btn fn" data-action="sign">&plusmn;</button>
+
+      <!-- Row 5: 4 5 6 * -->
+      <button class="btn num" data-action="4">4</button>
+      <button class="btn num" data-action="5">5</button>
+      <button class="btn num" data-action="6">6</button>
+      <button class="btn op" data-action="*">&times;</button>
+      <button class="btn fn" data-action="inv">1/x</button>
+
+      <!-- Row 6: 1 2 3 - -->
+      <button class="btn num" data-action="1">1</button>
+      <button class="btn num" data-action="2">2</button>
+      <button class="btn num" data-action="3">3</button>
+      <button class="btn op" data-action="-">&minus;</button>
+      <button class="btn fn" data-action="fact">n!</button>
+
+      <!-- Row 7: 0 . = + -->
+      <button class="btn num zero" data-action="0">0</button>
+      <button class="btn num" data-action=".">.</button>
+      <button class="btn equals" data-action="=">=</button>
+      <button class="btn op" data-action="+">&plus;</button>
+      <button class="btn fn" data-action="abs">|x|</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
